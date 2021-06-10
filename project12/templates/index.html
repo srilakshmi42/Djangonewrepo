@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example12</title>
+</head>
+<body>
+    <h1 align="center"> Welcome to Sathya </h1>
+    <form method="post" action="/logincheck/">
+        {% csrf_token %}
+        <table align="center" border="2">
+            <tr>
+                <th colspan="2"> Login page </th>
+            </tr>
+            <tr>
+                <td> UserName </td>
+                <td><input type="text" placeholder="username" required name="t1"></td>
+            </tr>
+            <tr>
+                <td> Password </td>
+                <td><input type="password" placeholder="password" required name="t2"></td>
+            </tr>
+            <tr>
+                <th colspan="2"><button type="submit"> Login </button></th>
+            </tr>
+
+        </table>
+
+    </form>
+
+</body>
+</html>
