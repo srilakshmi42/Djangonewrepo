@@ -1,0 +1,41 @@
+{% extends 'common.html' %}
+{% block content %}
+    <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table align="center" border="2" width="50%">
+    <div class="container login_page">
+    <div>
+        <h3 style="padding: 10px"> Login Page</h3>
+    </div>
+    <div style="padding: 10px">
+        <input
+                     type="email"
+                     placeholder="Email(Username)"
+                     name="mail"
+                     required
+                     class="form-control"
+                     aria-label="Sizing example input"
+                     aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div style="padding: 10px">
+        <input
+                     type="password"
+                     placeholder="Password"
+                     name="password"
+                     required
+                     class="form-control"
+                     aria-label="Sizing example input"
+                     aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div>
+        <button type="submit"> Login </button>
+    </div>
+    {% if error_message %}
+        <div style="padding:10px">
+            {{ error_message }}
+        </div>
+    {% endif %}
+  </div>
+    </table>
+    </form>
+{% endblock %}
