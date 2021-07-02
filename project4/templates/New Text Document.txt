@@ -1,0 +1,5 @@
+<html>
+<body bgcolor="yellow">
+<h1>Welcome to Templates </h1>
+</body>
+</html>

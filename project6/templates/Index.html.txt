@@ -1,0 +1,17 @@
+<html>
+<body>
+<table align="center" border="2" width="500">
+<tr>
+<th>Idno</th>
+<th>Name</th>
+<th>Marks</th>
+</tr>
+{% for record in data %}
+<tr>
+<td>{{idno}}</td>
+<td>{{name}}</td>
+<td>{{marks}}</td>
+</tr>
+</table>
+</body>
+</html>

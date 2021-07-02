@@ -1,0 +1,73 @@
+{% load static %}
+<html>
+    <head>
+        <title >Login Page</title>
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    </head>
+        <body>
+            <table align="center" border="2">
+                <tr>
+                    <th>
+                        <img src="{%  static 'images/icon.png'%}" width="100" height="100" %}>
+                    </th>
+                    <th id="_title">
+                        Real Time Reporting
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <table align="center" border="2">
+                            <tr>
+                                <th colspan="3" id="login_title">
+                                    Employee Login Page
+                                </th>
+                            </tr>
+                            <tr>
+                                <th rowspan="5">
+                                    <img src="{% static 'images/login_icon.png' %}">
+                                </th>
+                                <th>
+                                    username
+                                </th>
+                                <th>
+                                    <input type="text" required>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Password
+                                </th>
+                                <th>
+                                    <input type="password" required >
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">
+                                    <button type="submit" onclick="show()">Login</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="2" id="forgotpassword">
+                                    Forgot Password?
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="2" id="newuser">
+                                    New User Registration?
+                                </th>
+                            </tr>
+                            <table align="center">
+                            <tr>
+                                <video src="{% static 'video/sri.mp4' %}" controls width="300" height="300"></video>
+                            </tr>
+                            <tr>
+                                <audio src="{% static 'audio/sri.mp3' %}" controls></audio>
+                            </tr>
+                            </table>
+                        </table>
+                    </th>
+                </tr>
+            </table>
+        <script src="{% static 'js/myscript.js' %}"></script>
+        </body>
+</html>
