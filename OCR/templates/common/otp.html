@@ -1,0 +1,41 @@
+{% extends 'common/common.html' %}
+{% block menhu %}
+    {% include 'common/menu.html' %}
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'validate_otp' %}" method="post">
+    {% csrf_token %}
+    <div class="container" style="width: 450px">
+        <div class="row student_otp" >
+            <div class="col">
+                <div class="alert alert-danger" role="alert">
+                    {% for message in messages %}
+                        we sent an OTP to this Number : {{ message }}
+                        <input typ="hidden" name="contact" value="{{ message }}">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row student_otp">
+            <div class="col">
+                  <input type="password"
+                         placeholder="Enter 6 digit OTP"
+                         max="6"
+                         min="6"
+                         required
+                         class="form-control"
+                         aria-label="Sizing example input"
+                         aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        <div class="row student_otp">
+            <div class="col">
+                <button type="submit" class="btn-danger">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+    </form>
+{% endblock %}
