@@ -9,5 +9,6 @@ urlpatterns=[
     path('student_Otp/',views.openStudentOtp,name='student_otp'),
     path('student_login_check/',views.studentLoginCheck,name='student_login_check'),
     path('validate_otp/',views.validateOtp,name='validate_otp'),
+    path('faculty/',views.showFacultyPage,name='faculty_page')
 
 ]

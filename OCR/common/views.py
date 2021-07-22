@@ -66,6 +66,13 @@ def validateOtp(request):
 
 
 
+def showFacultyPage(request):
+    return render(request, 'common/faculty.html')
+
+
+
+
+
 
 
 
